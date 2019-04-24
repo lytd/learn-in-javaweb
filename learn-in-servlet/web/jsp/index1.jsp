@@ -13,5 +13,9 @@
   </head>
   <body>
   我的JSP1
+  <form action="/luanma" method="post">
+    <input type="text" name="name">
+    <input type="submit" value="提交"/>
+  </form>
   </body>
 </html>

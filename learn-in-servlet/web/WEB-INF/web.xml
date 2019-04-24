@@ -41,6 +41,10 @@
         <servlet-name>DemoServlet</servlet-name>
         <servlet-class>td.learn.learnj2ee.servlet.DemoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LuanMaServlet</servlet-name>
+        <servlet-class>td.learn.learnj2ee.question.LuanMaServlet</servlet-class>
+    </servlet>
 
 
     <!--配置servlet映射-->
@@ -63,4 +67,10 @@
         <servlet-name>DemoServlet</servlet-name>
         <url-pattern>/demo</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LuanMaServlet</servlet-name>
+        <url-pattern>/luanma</url-pattern>
+    </servlet-mapping>
+
 </web-app>
