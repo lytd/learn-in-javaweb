@@ -8,6 +8,10 @@
         <param-name>mytestname</param-name>
         <param-value>mytestvalue</param-value>
     </context-param>
+
+
+
+
     <!--配置Servlet-->
     <servlet>
         <servlet-name>MySevlet1</servlet-name>
@@ -46,6 +50,22 @@
         <servlet-class>td.learn.learnj2ee.question.LuanMaServlet</servlet-class>
     </servlet>
 
+    <filter>
+        <filter-name>FirstFilter</filter-name>
+        <filter-class>td.learn.learnj2ee.filter.FirstFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>AllFilter</filter-name>
+        <filter-class>td.learn.learnj2ee.filter.AllFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FirstFilter</filter-name>
+        <url-pattern>/ms</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AllFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <!--配置servlet映射-->
     <servlet-mapping>
@@ -72,5 +92,7 @@
         <servlet-name>LuanMaServlet</servlet-name>
         <url-pattern>/luanma</url-pattern>
     </servlet-mapping>
+
+
 
 </web-app>
