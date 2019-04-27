@@ -8,8 +8,9 @@
         <param-name>mytestname</param-name>
         <param-value>mytestvalue</param-value>
     </context-param>
-
-
+    <listener>
+        <listener-class>td.learn.learnj2ee.listener.MyFirstListener</listener-class>
+    </listener>
 
 
     <!--配置Servlet-->
@@ -48,6 +49,14 @@
     <servlet>
         <servlet-name>LuanMaServlet</servlet-name>
         <servlet-class>td.learn.learnj2ee.question.LuanMaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CookieDemoServlet</servlet-name>
+        <servlet-class>td.learn.learnj2ee.session.CookieDemoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserSessionServlet</servlet-name>
+        <servlet-class>td.learn.learnj2ee.session.UserSessionServlet</servlet-class>
     </servlet>
 
     <filter>
@@ -93,6 +102,14 @@
         <url-pattern>/luanma</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>CookieDemoServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserSessionServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
